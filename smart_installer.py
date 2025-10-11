@@ -205,11 +205,10 @@ class SmartInstaller(QWidget):
         )
 
     # -----------------------------------------------------------
-    # -----------------------------------------------------------
     def start_download(self):
         tmp_dir = tempfile.gettempdir()
-        # ✅ Updated download URL to your GitHub direct file link
-        file_url = "https://github.com/elchisomeke-dev/stackcheckmate/raw/main/STACKCHECKMATE%20SOFTWARE/dist/StackCheckMate.exe"
+        # ✅ Updated download URL to your new GitHub repo (raw file link)
+        file_url = "https://github.com/QRTQuick/stackcheckmate/raw/main/STACKCHECKMATE%20SOFTWARE/dist/StackCheckMate.exe"
         self.temp_path = os.path.join(tmp_dir, "StackCheckMate.exe")
 
         self.download_btn.setEnabled(False)
