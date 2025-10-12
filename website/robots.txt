@@ -1,3 +1,19 @@
+# ==================================================
+# 🧠 StackCheckMate - Robots.txt
+# Optimized for SEO and fast indexing
+# Built by Quick Red Tech
+# ==================================================
+
+# Allow all search engines to crawl everything
 User-agent: *
 Allow: /
+
+# Block common unnecessary files/folders (optional)
+Disallow: /node_modules/
+Disallow: /scripts/
+Disallow: /temp/
+Disallow: /*.log$
+Disallow: /*.tmp$
+
+# Sitemap location
 Sitemap: https://qrtquick.github.io/stackcheckmate/sitemap.xml
