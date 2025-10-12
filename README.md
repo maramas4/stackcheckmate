@@ -6,19 +6,19 @@
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
 **StackCheckMate** is a **universal developer assistant and environment manager** built by **Quick Red Tech**.  
-It helps programmers automatically detect system configurations, install packages (`pip`, `npm`, `jdk`, etc.), and manage environment variables — all through a **beautiful and intuitive GUI**.
+It helps programmers automatically detect system configurations, install essential packages (`pip`, `npm`, `jdk`, etc.), and manage environment variables — all through a **beautiful, intuitive GUI**.
 
-Whether you’re coding in **Python, JavaScript, or Java**, StackCheckMate ensures your system is clean, optimized, and ready to code 🚀  
+Whether you code in **Python, JavaScript, or Java**, StackCheckMate ensures your setup is optimized and ready to create 🚀  
 
 ---
 
 ## ⚙️ Key Features
-- 🖥️ **Auto System Detection:** Works on Windows, macOS, and Linux  
+- 🖥️ **Auto System Detection:** Compatible with Windows, macOS, and Linux  
 - 📦 **Smart Package Manager:** Installs and updates developer tools (`pip`, `npm`, `jdk`, etc.)  
-- 🔍 **Environment Inspector:** View and manage PATH & system variables easily  
-- 🧠 **AI-Smart Auto Installer:** Installs the right version for your OS automatically  
-- 🎨 **Modern UI:** Simple, sleek, and beginner-friendly — no command line needed  
-- ⚡ **Lightweight:** Fast setup and minimal system resource usage  
+- 🔍 **Environment Inspector:** View and manage PATH & system variables  
+- 🧠 **AI-Smart Auto Installer:** Automatically installs the correct setup for your OS  
+- 🎨 **Modern GUI:** Simple, sleek, and beginner-friendly — no terminal needed  
+- ⚡ **Lightweight & Fast:** Minimal resource usage, optimized for speed  
 
 ---
 
@@ -29,7 +29,7 @@ Whether you’re coding in **Python, JavaScript, or Java**, StackCheckMate ensur
 | 🍎 **macOS** | `.app` | ⚙️ Coming Soon | — |
 | 🐧 **Linux** | `.bin` | ⚙️ Coming Soon | — |
 
-> 💡 The **Smart Installer** detects your OS and installs the right version automatically.
+> 💡 **The Smart Installer automatically detects your OS** and installs the correct version of StackCheckMate.
 
 ---
 
@@ -37,21 +37,21 @@ Whether you’re coding in **Python, JavaScript, or Java**, StackCheckMate ensur
 - **Language:** Python 3.12+  
 - **Frameworks:** PySide6, Tkinter  
 - **Packaging:** PyInstaller  
-- **Utilities:** Requests, Tempfile, OS detection  
+- **Modules:** Requests, Tempfile, OS, Subprocess  
 - **Category:** Developer Tools / System Setup Assistant  
 
 ---
 
 ## 🧠 How to Use
-1. Download the installer for your OS.  
-2. Run **StackCheckMate Smart Installer.exe** (Administrator permission may be required).  
-3. Follow on-screen steps to complete setup.  
-4. Launch StackCheckMate — your **personal system setup companion**.  
+1. Download the **StackCheckMate Smart Installer.exe** from the table above.  
+2. Run the installer (Administrator permission may be required).  
+3. Follow the guided steps to complete installation.  
+4. Launch **StackCheckMate** and enjoy your all-in-one developer setup tool.  
 
 ---
 
 ## 🔍 SEO Tags
-> Developer Assistant, Quick Red Tech, StackCheckMate, Python Installer, Package Manager GUI, Cross-Platform Developer Tool, Environment Manager, Software Setup Assistant, Developer Toolkit 2025, System Optimizer for Developers, Python GUI App  
+> Developer Assistant, Quick Red Tech, StackCheckMate, Python Installer, Package Manager GUI, Cross-Platform Developer Tool, Environment Manager, System Setup Assistant, Developer Toolkit 2025, OS Detection Installer, Software Deployment Tool, Stack Installer, Smart Installer for Developers, Python GUI Application  
 
 ---
 
