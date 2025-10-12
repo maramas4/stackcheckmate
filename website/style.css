@@ -1,119 +1,23 @@
+/* ==========================================================
+   🧠 StackCheckMate Official Landing Page  
+   Theme: Dark Red & Silver by Quick Red Tech  
+   Author: Chisom Life Eke  
+   ========================================================== */
+
+/* 🔧 RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
+/* 🌑 GLOBAL */
 body {
     background-color: #0b0b0b;
-    color: white;
+    color: silver;
     text-align: center;
     overflow-x: hidden;
-}
-
-/* Hero section */
-.hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #000, #1a1a1a, #8b0000);
-    background-size: 300% 300%;
-    animation: gradientShift 6s infinite alternate;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.hero h1 {
-    font-size: 3rem;
-    z-index: 1;
-    color: silver;
-    text-shadow: 0 0 15px red;
-}
-
-.hero .tagline {
-    z-index: 1;
-    margin: 1rem 0;
-    font-size: 1.2rem;
-}
-
-.btn-download {
-    z-index: 1;
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: red;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    box-shadow: 0 0 10px red;
-    transition: all 0.3s ease;
-}
-
-.btn-download:hover {
-    background: silver;
-    color: black;
-    box-shadow: 0 0 20px white;
-}
-
-/* About & Features sections */
-.about, .features {
-    padding: 4rem 10%;
-    background-color: #111;
-    border-top: 2px solid red;
-    border-bottom: 2px solid red;
-}
-
-.features ul {
-    list-style: none;
-    margin-top: 1.5rem;
-}
-
-.features li {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    color: silver;
-}
-
-/* Footer */
-footer {
-    background: #000;
-    padding: 20px;
-    color: gray;
-    font-size: 0.9rem;
-}
-
-footer a {
-    color: silver;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Animation */
-@keyframes gradientShift {
-    from { background-position: left; }
-    to { background-position: right; }
-}
-/* 🔧 RESET */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #0c0c0c;
-    color: #f0f0f0;
 }
 
 /* 🌍 NAVBAR */
@@ -133,16 +37,17 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: red;
+    color: silver;
+    text-shadow: 0 0 10px red;
 }
 
 .nav-icon {
-    width: 35px;
-    height: 35px;
-    border-radius: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
 }
 
 .nav-links {
@@ -155,6 +60,7 @@ body {
     color: silver;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -163,35 +69,53 @@ body {
 
 /* 🏠 HERO */
 .hero {
-    text-align: center;
-    padding: 8rem 10% 5rem;
-    background: linear-gradient(135deg, #111, #1a1a1a);
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000, #1a1a1a, #8b0000);
+    background-size: 300% 300%;
+    animation: gradientShift 6s infinite alternate;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 10% 4rem;
     margin-top: 70px;
 }
 
 .logo {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     margin-bottom: 1rem;
 }
 
-.tagline {
+.hero h1 {
+    font-size: 3rem;
     color: silver;
-    margin-bottom: 1.5rem;
+    text-shadow: 0 0 15px red;
+}
+
+.tagline {
+    color: #ddd;
+    margin: 1rem 0;
+    font-size: 1.2rem;
 }
 
 .btn-download {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
     background: red;
     color: white;
-    padding: 0.8rem 1.8rem;
-    border-radius: 30px;
     text-decoration: none;
+    border-radius: 30px;
     font-weight: bold;
-    transition: 0.3s;
+    box-shadow: 0 0 10px red;
+    transition: all 0.3s ease;
 }
 
 .btn-download:hover {
-    background: darkred;
+    background: silver;
+    color: black;
+    box-shadow: 0 0 20px white;
 }
 
 /* 📦 SECTIONS */
@@ -201,17 +125,21 @@ section {
 }
 
 .about, .features, .download, .developer {
-    border-top: 1px solid #222;
+    background-color: #111;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
 }
 
 /* 🔑 FEATURES */
 .features ul {
     list-style: none;
     padding: 0;
+    margin-top: 1.5rem;
 }
 
 .features li {
     margin: 0.5rem 0;
+    font-size: 1.1rem;
     color: silver;
 }
 
@@ -222,8 +150,8 @@ section {
 }
 
 .dev-photo {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     margin: 15px 0;
     box-shadow: 0 0 20px red;
@@ -240,7 +168,84 @@ section {
 footer {
     text-align: center;
     padding: 2rem;
-    background: #111;
+    background: #000;
     color: silver;
     font-size: 0.9rem;
+}
+
+footer a {
+    color: red;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: silver;
+}
+
+/* 🎨 ANIMATION */
+@keyframes gradientShift {
+    from { background-position: left; }
+    to { background-position: right; }
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .nav-links {
+        gap: 15px;
+    }
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    .tagline {
+        font-size: 1rem;
+    }
+    .btn-download {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem 5%;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .hero {
+        padding: 6rem 5% 3rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 5rem 5% 2rem;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .tagline {
+        font-size: 0.95rem;
+    }
+    .btn-download {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dev-photo {
+        width: 70px;
+        height: 70px;
+    }
 }
