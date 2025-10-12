@@ -1,54 +1,64 @@
 # 🧠 StackCheckMate  
 ### Built by **Quick Red Tech** | Created by **Chisom Life Eke**
 
-![Platform](https://img.shields.io/badge/platform-cross--platform-blue?style=for-the-badge)
-![Version](https://img.shields.io/badge/version-1.0.0-red?style=for-the-badge)
+![Platform](https://img.shields.io/badge/platform-cross--platform-blue?style=for-the-badge)  
+![Version](https://img.shields.io/badge/version-1.0.0-red?style=for-the-badge)  
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-**StackCheckMate** is a **cross-platform developer assistant** that automatically detects your system, manages package installations (`pip`, `npm`, etc.), checks environment variables, and keeps your developer setup clean — all through a **friendly GUI**.
+**StackCheckMate** is a **universal developer assistant and environment manager** built by **Quick Red Tech**.  
+It helps programmers automatically detect system configurations, install packages (`pip`, `npm`, `jdk`, etc.), and manage environment variables — all through a **beautiful and intuitive GUI**.
+
+Whether you’re coding in **Python, JavaScript, or Java**, StackCheckMate ensures your system is clean, optimized, and ready to code 🚀  
 
 ---
 
-## ⚙️ Features
-- 🖥️ Detects your operating system (Windows, macOS, Linux)  
-- 📦 Installs and manages developer packages (`pip`, `npm`, `jdk`, etc.)  
-- 🔍 Displays installed packages for each language  
-- 🧩 Shows system PATH & environment variables  
-- 🧠 Smart auto-installer that chooses correct platform version  
-- 🎨 Modern GUI — not just another command-line tool  
+## ⚙️ Key Features
+- 🖥️ **Auto System Detection:** Works on Windows, macOS, and Linux  
+- 📦 **Smart Package Manager:** Installs and updates developer tools (`pip`, `npm`, `jdk`, etc.)  
+- 🔍 **Environment Inspector:** View and manage PATH & system variables easily  
+- 🧠 **AI-Smart Auto Installer:** Installs the right version for your OS automatically  
+- 🎨 **Modern UI:** Simple, sleek, and beginner-friendly — no command line needed  
+- ⚡ **Lightweight:** Fast setup and minimal system resource usage  
 
 ---
 
-## 🚀 Platform Builds
+## 🚀 Download StackCheckMate
 | Platform | File Type | Status | Download |
 |-----------|------------|--------|-----------|
-| 🪟 **Windows** | `.exe` | ✅ Ready | [Download](https://github.com/QRTQuick/stackcheckmate/blob/main/dist/StackCheckMate.exe) |
-| 🍎 **macOS** | `.app` | ⚙️ In Development | Coming Soon |
-| 🐧 **Linux** | `.bin` | ⚙️ In Development | Coming Soon |
+| 🪟 **Windows** | `.exe` | ✅ Ready | [Download StackCheckMate Smart Installer.exe](https://github.com/QRTQuick/stackcheckmate/raw/main/STACKCHECKMATE%20SOFTWARE/dist/StackCheckMate%20Smart%20Installer.exe) |
+| 🍎 **macOS** | `.app` | ⚙️ Coming Soon | — |
+| 🐧 **Linux** | `.bin` | ⚙️ Coming Soon | — |
 
-> 💡 The installer automatically detects your OS and installs the right version.
+> 💡 The **Smart Installer** detects your OS and installs the right version automatically.
 
 ---
 
 ## 🧰 Tech Stack
 - **Language:** Python 3.12+  
-- **Frameworks:** PySide6 / Tkinter  
+- **Frameworks:** PySide6, Tkinter  
 - **Packaging:** PyInstaller  
 - **Utilities:** Requests, Tempfile, OS detection  
+- **Category:** Developer Tools / System Setup Assistant  
 
 ---
 
-## 💡 Usage
-1. Download the correct installer for your operating system.  
-2. Run the installer (Admin permission may be required).  
-3. Launch **StackCheckMate** — your personal developer setup assistant!  
+## 🧠 How to Use
+1. Download the installer for your OS.  
+2. Run **StackCheckMate Smart Installer.exe** (Administrator permission may be required).  
+3. Follow on-screen steps to complete setup.  
+4. Launch StackCheckMate — your **personal system setup companion**.  
+
+---
+
+## 🔍 SEO Tags
+> Developer Assistant, Quick Red Tech, StackCheckMate, Python Installer, Package Manager GUI, Cross-Platform Developer Tool, Environment Manager, Software Setup Assistant, Developer Toolkit 2025, System Optimizer for Developers, Python GUI App  
 
 ---
 
 ## 👨‍💻 Developer
 **Chisom Life Eke**  
 Founder — **Quick Red Tech**  
-> “Building smart tools for developers and dreamers ✨”
+> “Building smart tools to upgrade the developer community.”  
 
 🌐 **GitHub:** [@QRTQuick](https://github.com/QRTQuick)  
 📧 **Email:** quickredtech@gmail.com  
