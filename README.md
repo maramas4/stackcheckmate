@@ -1,3 +1,24 @@
+<!-- 
+==============================================================
+🧠 StackCheckMate - SEO Metadata
+Built by Quick Red Tech | Created by Chisom Life Eke
+==============================================================
+
+Description: StackCheckMate is a universal developer assistant and environment manager built by Quick Red Tech. 
+It automatically detects OS environments, installs packages (pip, npm, jdk), and manages PATH variables — all through a sleek GUI. 
+Compatible with Windows, macOS, and Linux.
+
+Keywords: StackCheckMate, Quick Red Tech, Developer Assistant, Python Installer, Package Manager GUI, 
+Cross-Platform Developer Tool, Environment Manager, Smart Installer, Developer Toolkit 2025, 
+Python GUI App, Software Setup Tool, OS Detector, Auto Package Installer, Chisom Life Eke
+
+Author: Chisom Life Eke
+URL: https://github.com/QRTQuick/stackcheckmate
+License: MIT
+Open Graph Image: https://raw.githubusercontent.com/QRTQuick/stackcheckmate/main/icon.png
+==============================================================
+-->
+
 # 🧠 StackCheckMate  
 ### Built by **Quick Red Tech** | Created by **Chisom Life Eke**
 
@@ -51,7 +72,7 @@ Whether you code in **Python, JavaScript, or Java**, StackCheckMate ensures your
 ---
 
 ## 🔍 SEO Tags
-> Developer Assistant, Quick Red Tech, StackCheckMate, Python Installer, Package Manager GUI, Cross-Platform Developer Tool, Environment Manager, System Setup Assistant, Developer Toolkit 2025, OS Detection Installer, Software Deployment Tool, Stack Installer, Smart Installer for Developers, Python GUI Application  
+> StackCheckMate, Quick Red Tech, Python Installer, Developer Assistant, Package Manager GUI, Cross-Platform Developer Tool, Environment Manager, System Setup Assistant, Developer Toolkit 2025, OS Detection Installer, Smart Installer for Developers, Python GUI Application, Chisom Life Eke  
 
 ---
 
