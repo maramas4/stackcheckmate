@@ -13,6 +13,7 @@ Cross-Platform Developer Tool, Environment Manager, Smart Installer, Developer T
 Python GUI App, Software Setup Tool, OS Detector, Auto Package Installer, Chisom Life Eke
 
 Author: Chisom Life Eke
+Website: https://qrtquick.github.io/stackcheckmate/
 URL: https://github.com/QRTQuick/stackcheckmate
 License: MIT
 Open Graph Image: https://raw.githubusercontent.com/QRTQuick/stackcheckmate/main/icon.png
@@ -20,7 +21,7 @@ Open Graph Image: https://raw.githubusercontent.com/QRTQuick/stackcheckmate/main
 -->
 
 # 🧠 StackCheckMate  
-### Built by **Quick Red Tech** | Created by **Chisom Life Eke**
+### Built by **Quick Red Tech** | Created by **Chisom Life Eke**  
 
 ![Platform](https://img.shields.io/badge/platform-cross--platform-blue?style=for-the-badge)  
 ![Version](https://img.shields.io/badge/version-1.0.0-red?style=for-the-badge)  
@@ -30,6 +31,8 @@ Open Graph Image: https://raw.githubusercontent.com/QRTQuick/stackcheckmate/main
 It helps programmers automatically detect system configurations, install essential packages (`pip`, `npm`, `jdk`, etc.), and manage environment variables — all through a **beautiful, intuitive GUI**.
 
 Whether you code in **Python, JavaScript, or Java**, StackCheckMate ensures your setup is optimized and ready to create 🚀  
+
+🌐 **Website:** [https://qrtquick.github.io/stackcheckmate/](https://qrtquick.github.io/stackcheckmate/)
 
 ---
 
@@ -72,7 +75,7 @@ Whether you code in **Python, JavaScript, or Java**, StackCheckMate ensures your
 ---
 
 ## 🔍 SEO Tags
-> StackCheckMate, Quick Red Tech, Python Installer, Developer Assistant, Package Manager GUI, Cross-Platform Developer Tool, Environment Manager, System Setup Assistant, Developer Toolkit 2025, OS Detection Installer, Smart Installer for Developers, Python GUI Application, Chisom Life Eke  
+> StackCheckMate, Quick Red Tech, Python Installer, Developer Assistant, Package Manager GUI, Cross-Platform Developer Tool, Environment Manager, System Setup Assistant, Developer Toolkit 2025, OS Detection Installer, Smart Installer for Developers, Python GUI Application, Chisom Life Eke, Developer Tools Website  
 
 ---
 
@@ -81,6 +84,7 @@ Whether you code in **Python, JavaScript, or Java**, StackCheckMate ensures your
 Founder — **Quick Red Tech**  
 > “Building smart tools to upgrade the developer community.”  
 
+🌐 **Website:** [https://qrtquick.github.io/stackcheckmate/](https://qrtquick.github.io/stackcheckmate/)  
 🌐 **GitHub:** [@QRTQuick](https://github.com/QRTQuick)  
 📧 **Email:** quickredtech@gmail.com  
 
