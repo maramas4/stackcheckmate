@@ -46,7 +46,7 @@ Whether you code in **Python, JavaScript, or Java**, StackCheckMate ensures your
 ## 🚀 Download StackCheckMate
 | Platform | File Type | Status | Download |
 |-----------|------------|--------|-----------|
-| 🪟 **Windows** | `.exe` | ✅ Ready | [Download StackCheckMate Smart Installer.exe](https://github.com/QRTQuick/stackcheckmate/raw/main/STACKCHECKMATE%20SOFTWARE/dist/StackCheckMate%20Smart%20Installer.exe) |
+| 🪟 **Windows** | `.exe` | ✅ Ready | [Download StackCheckMate Smart Installer.exe](https://github.com/QRTQuick/stackcheckmate/releases/download/release-1.0/StackCheckMate_Smart_Installer.exe) |
 | 🍎 **macOS** | `.app` | ⚙️ Coming Soon | — |
 | 🐧 **Linux** | `.bin` | ⚙️ Coming Soon | — |
 
