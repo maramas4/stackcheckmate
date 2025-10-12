@@ -3,7 +3,7 @@
 # Product of Quick Red Tech
 # Owned by Chisom Life Eke
 # ===============================================================
-
+import emoji
 import sys
 import os
 import requests

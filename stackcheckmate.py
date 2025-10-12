@@ -6,6 +6,7 @@
 # ===============================================================
 
 import sys, subprocess, platform, os, json, psutil, threading, time
+import shutil
 from datetime import datetime
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QLabel, QLineEdit,
@@ -13,11 +14,14 @@ from PySide6.QtWidgets import (
     QHBoxLayout, QInputDialog, QTabWidget, QScrollArea, QFormLayout
 )
 from PySide6.QtGui import QAction, QFont, QIcon, QKeySequence
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QTimer, Signal
 from plyer import notification
 
 
 class StackCheckMate(QMainWindow):
+    update_installed_packages_signal = Signal(str)
+    show_message_signal = Signal(str, bool)  # message, error_flag
+
     def __init__(self):
         super().__init__()
         self.setWindowTitle("StackCheckMate - Universal Dev Toolkit")
@@ -27,14 +31,20 @@ class StackCheckMate(QMainWindow):
         self.profile_file = "profile.json"
         self.init_ui()
 
+        # Connect signals
+        self.update_installed_packages_signal.connect(self.installed_packages_text.setPlainText)
+        self.show_message_signal.connect(self.show_msg)
+
         # Start motivational notifier in background
-        threading.Thread(target=self.motivation_thread, daemon=True).start()
+        #threading.Thread(target=self.motivation_thread, daemon=True).start()
 
     # --------------------------- UI SETUP --------------------------
     def init_ui(self):
         self.tabs = QTabWidget()
-        self.tabs.setStyleSheet("QTabBar::tab {background:#1a1a1a; color:white; padding:10px;} "
-                                "QTabBar::tab:selected {background:#ff3b3b;}")
+        self.tabs.setStyleSheet(
+            "QTabBar::tab {background:#1a1a1a; color:white; padding:10px;} "
+            "QTabBar::tab:selected {background:#ff3b3b;}"
+        )
 
         self.tabs.addTab(self.create_installer_tab(), "📦 Package Manager")
         self.tabs.addTab(self.create_env_tab(), "🌍 Env & System Info")
@@ -76,7 +86,34 @@ class StackCheckMate(QMainWindow):
         help_menu.addAction(credits_action)
 
         return menubar
+# --------------------- SHOW INSTALLED PACKAGES -------------------
+    def show_installed_packages(self):
+        # Run in a separate thread to avoid freezing UI 
+        threading.Thread(target=self._show_installed_packages_thread, daemon=True).start()
 
+    def _show_installed_packages_thread(self):
+        lang = self.language_select.currentText()
+        try:
+            if "Python" in lang:
+                python_cmd = "python"  # or "python3" if needed
+                out = subprocess.check_output(
+                    [python_cmd, "-m", "pip", "list"],
+                    stderr=subprocess.STDOUT,
+                    creationflags=0x08000000  # optional: hide the console window
+                ).decode()
+            elif "Node" in lang:
+                out = subprocess.check_output(["npm", "list", "-g", "--depth=0"], stderr=subprocess.STDOUT).decode()
+            elif "Java" in lang:
+                out = subprocess.check_output(["java", "-version"], stderr=subprocess.STDOUT).decode()
+            elif "Ruby" in lang:
+                out = subprocess.check_output(["gem", "list"], stderr=subprocess.STDOUT).decode()
+            else:
+                out = f"Installed package listing for {lang} not supported."
+
+            # Update the text area safely via signal
+            self.update_installed_packages_signal.emit(out)
+        except Exception as e:
+            self.update_installed_packages_signal.emit(f"Error: {str(e)}")
     # -------------------- PAGE 1: PACKAGE MANAGER -------------------
     def create_installer_tab(self):
         widget = QWidget()
@@ -172,8 +209,7 @@ class StackCheckMate(QMainWindow):
         scroll.setWidget(widget)
         scroll.setWidgetResizable(True)
         return scroll
-
-    # ------------------ PAGE 3: NETWORK MONITOR ---------------------
+# ------------------ PAGE 3: NETWORK MONITOR ---------------------
     def create_network_tab(self):
         widget = QWidget()
         layout = QVBoxLayout(widget)
@@ -193,13 +229,11 @@ class StackCheckMate(QMainWindow):
         refresh_btn.clicked.connect(self.update_network_usage)
         layout.addWidget(refresh_btn)
 
-        threading.Thread(target=self.auto_refresh_network, daemon=True).start()
-        return widget
+        self.network_timer = QTimer()
+        self.network_timer.timeout.connect(self.update_network_usage)
+        self.network_timer.start(5000)  # update every 5 seconds
 
-    def auto_refresh_network(self):
-        while True:
-            self.update_network_usage()
-            time.sleep(5)
+        return widget
 
     def update_network_usage(self):
         counters = psutil.net_io_counters()
@@ -222,8 +256,10 @@ class StackCheckMate(QMainWindow):
         self.whatsapp_input = QLineEdit()
         self.facebook_input = QLineEdit()
 
-        for field in [self.name_input, self.github_input, self.linkedin_input,
-                      self.email_input, self.twitter_input, self.whatsapp_input, self.facebook_input]:
+        for field in [
+            self.name_input, self.github_input, self.linkedin_input,
+            self.email_input, self.twitter_input, self.whatsapp_input, self.facebook_input
+        ]:
             field.setStyleSheet(self.input_style())
 
         layout.addRow("👤 Full Name:", self.name_input)
@@ -291,24 +327,7 @@ class StackCheckMate(QMainWindow):
             "Theme: Red | Neon | Black | White."
         )
 
-    # ----------------------- REST OF LOGIC (same) --------------------
-    def motivation_thread(self):
-        while True:
-            try:
-                name = "Developer"
-                if os.path.exists(self.profile_file):
-                    with open(self.profile_file, "r") as f:
-                        data = json.load(f)
-                        name = data.get("name", "Developer")
-                notification.notify(
-                    title="💪 Keep Grinding!",
-                    message=f"Hey {name}, remember — consistency creates legends. 🚀",
-                    timeout=10
-                )
-            except Exception:
-                pass
-            time.sleep(7200)
-
+    # ----------------------- PROFILE METHODS ------------------------
     def save_profile(self):
         data = {
             "name": self.name_input.text(),
@@ -348,52 +367,105 @@ class StackCheckMate(QMainWindow):
         )
         QMessageBox.information(self, "Profile Card", card)
 
-    def show_about(self):
-        QMessageBox.information(
-            self, "About StackCheckMate",
-            "⚙️ StackCheckMate\n\nA Universal Developer Toolkit for managing packages, "
-            "environment variables, and network usage.\n\nBuilt by Quick Red Tech.\n"
-            "Owned by Chisom Life Eke.\nTheme: Red | Neon | Black | White."
-        )
-
-    # --------------- Package & Env logic kept from base version ---------------
+    # ----------------------- PACKAGE INSTALLERS ----------------------
     def install_packages(self):
         lang = self.language_select.currentText()
         packages = [p.strip() for p in self.package_input.text().split(",") if p.strip()]
         if not packages:
             QMessageBox.warning(self, "Error", "Please enter at least one package name.")
             return
-        try:
-            if "Python" in lang:
-                for pkg in packages:
-                    subprocess.check_call([sys.executable, "-m", "pip", "install", pkg])
-            elif "Node" in lang:
-                for pkg in packages:
-                    subprocess.check_call(["npm", "install", "-g", pkg])
-            elif "Java" in lang:
-                QMessageBox.information(self, "Info", "For Java JDK, use SDKMAN or system manager.")
-            elif "Ruby" in lang:
-                for pkg in packages:
-                    subprocess.check_call(["gem", "install", pkg])
-            QMessageBox.information(self, "Success", "Package(s) installed successfully!")
-        except Exception as e:
-            QMessageBox.critical(self, "Error", str(e))
 
-    def show_installed_packages(self):
-        lang = self.language_select.currentText()
-        try:
-            if "Python" in lang:
-                out = subprocess.check_output([sys.executable, "-m", "pip", "list"]).decode()
-            elif "Node" in lang:
-                out = subprocess.check_output(["npm", "list", "-g", "--depth=0"]).decode()
-            elif "Java" in lang:
-                out = subprocess.check_output(["java", "-version"], stderr=subprocess.STDOUT).decode()
-            elif "Ruby" in lang:
-                out = subprocess.check_output(["gem", "list"]).decode()
-            self.installed_packages_text.setPlainText(out)
-        except Exception as e:
-            QMessageBox.critical(self, "Error", str(e))
+        if "Python" in lang:
+            threading.Thread(target=self.install_python_packages, args=(packages,), daemon=True).start()
+        elif "Node" in lang:
+            threading.Thread(target=self.install_node_packages, args=(packages,), daemon=True).start()
+        elif "Java" in lang:
+            threading.Thread(target=self.install_java_packages, args=(packages,), daemon=True).start()
+        elif "Ruby" in lang:
+            threading.Thread(target=self.install_ruby_packages, args=(packages,), daemon=True).start()
+        else:
+            QMessageBox.warning(self, "Error", f"Package installation for {lang} not supported yet.")
+    @staticmethod
+    def get_real_python_executable():
+        # Prevents StackCheckMate.exe from relaunching itself when frozen
+        if getattr(sys, "frozen", False):
+            possible_paths = [
+                os.path.join(os.path.dirname(sys.executable), "python.exe"),
+                os.path.join(sys._MEIPASS, "python.exe"),
+                shutil.which("python"),
+                shutil.which("python3")
+            ]
+            for path in possible_paths:
+                if path and os.path.exists(path):
+                    return path
+            return "python"  # fallback
+        return sys.executable
+    def install_python_packages(self, packages):
+        python_path = StackCheckMate.get_real_python_executable()
+        for pkg in packages:
+            self.show_message_signal.emit(f"🚀 Starting installation of {pkg}...", False)
+            try:
+                process = subprocess.Popen(
+                    [python_path, "-m", "pip", "install", pkg],
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True
+                )
 
+                for line in process.stdout:
+                    print(line, end='')  # live pip output
+                    self.show_message_signal.emit(line.strip(), False)  # optional: also show in GUI
+
+                process.wait()
+
+                if process.returncode == 0:
+                    self.show_message_signal.emit(f"✅ {pkg} installed successfully!", False)
+                else:
+                    self.show_message_signal.emit(f"❌ Failed to install {pkg}", True)
+
+            except Exception as e:
+                print("Error:", e)
+                self.show_message_signal.emit(f"❌ Error installing {pkg}: {str(e)}", True)
+    def install_node_packages(self, packages):
+        for pkg in packages:
+            try:
+                result = subprocess.run(["npm", "install", "-g", pkg], capture_output=True, text=True)
+                if result.returncode != 0:
+                    self.show_msg(f"Failed to install {pkg}:\n{result.stderr}", error=True)
+                else:
+                    self.show_msg(f"{pkg} installed successfully!")
+            except Exception as e:
+                self.show_msg(f"Error installing {pkg}:\n{str(e)}", error=True)
+
+    def install_java_packages(self, packages):
+        for pkg in packages:
+            self.show_message_signal.emit(f"🚀 Running Java package {pkg}...", False)
+            try:
+                result = subprocess.run(
+                    ["java", "-jar", pkg],
+                    capture_output=True,
+                    text=True,
+                    creationflags=0x08000000  # <-- hides the console window
+                )
+                if result.returncode != 0:
+                    self.show_message_signal.emit(f"❌ Failed to run {pkg}:\n{result.stderr}", True)
+                else:
+                    self.show_message_signal.emit(f"✅ {pkg} executed successfully!", False)
+            except Exception as e:
+                self.show_message_signal.emit(f"❌ Error running {pkg}: {str(e)}", True)
+
+    def install_ruby_packages(self, packages):
+        for pkg in packages:
+            try:
+                result = subprocess.run(["gem", "install", pkg], capture_output=True, text=True)
+                if result.returncode != 0:
+                    self.show_msg(f"Failed to install {pkg}:\n{result.stderr}", error=True)
+                else:
+                    self.show_msg(f"{pkg} installed successfully!")
+            except Exception as e:
+                self.show_msg(f"Error installing {pkg}:\n{str(e)}", error=True)
+
+    # ----------------------- ENVIRONMENT FUNCTIONS ------------------
     def show_env_variables(self):
         env_vars = "\n".join([f"{k}={v}" for k, v in os.environ.items()])
         self.env_text.setPlainText(env_vars)
@@ -468,61 +540,17 @@ class StackCheckMate(QMainWindow):
             QMenu {background-color:#1a1a1a; color:white;}
             QMenu::item:selected {background-color:#ff3b3b;}"""
 
+    # --------------------------- SHOW MSG ----------------------------
+    def show_msg(self, message, error=False):
+        if error:
+            QMessageBox.critical(self, "Error", message)
+        else:
+            QMessageBox.information(self, "Success", message)
+
 
 # ----------------------------- RUN APP -----------------------------
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-
-    # ================= TERMS & WARNINGS ==================
-    warning_text = (
-        "⚠️  IMPORTANT NOTICE - READ BEFORE CONTINUING\n\n"
-        "Welcome to StackCheckMate v1.2.1\n"
-        "A Universal Developer Toolkit created by Quick Red Tech.\n"
-        "Owned by: Chisom Life Eke.\n\n"
-        "By using this software, you agree to the following terms:\n\n"
-        "1️⃣ You are responsible for all package installations and system modifications made with this tool.\n"
-        "2️⃣ StackCheckMate will not be liable for data loss, environment corruption, or dependency conflicts.\n"
-        "3️⃣ On Linux/macOS, added environment variables may require restarting your terminal or PC.\n"
-        "4️⃣ Admin/root privileges may be required for some package installations (e.g., npm global installs).\n"
-        "5️⃣ Notifications are safe and local — no data is sent externally.\n\n"
-        "✅ This toolkit is intended for educational, personal, and development purposes only.\n"
-        "⚙️ By clicking 'I Understand & Agree', you acknowledge full responsibility for its use.\n\n"
-        "Developed by Quick Red Tech © 2025 | All Rights Reserved."
-    )
-
-    msg = QMessageBox()
-    msg.setWindowTitle("⚠️ StackCheckMate - Terms & Warning")
-    msg.setText(warning_text)
-    msg.setIcon(QMessageBox.Warning)
-    msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-    msg.setDefaultButton(QMessageBox.Ok)
-    msg.setStyleSheet("""
-        QMessageBox {
-            background-color: #0d0d0d;
-            color: white;
-            font-family: Consolas;
-            font-size: 13px;
-        }
-        QPushButton {
-            background-color: #ff3b3b;
-            color: white;
-            font-weight: bold;
-            padding: 8px 14px;
-            border-radius: 6px;
-        }
-        QPushButton:hover {
-            background-color: #ff5c5c;
-        }
-    """)
-
-    user_choice = msg.exec()
-
-    if user_choice == QMessageBox.Ok:
-        # Continue to app
-        window = StackCheckMate()
-        window.show()
-        sys.exit(app.exec())
-    else:
-        # Exit app if user disagrees
-        print("User declined the terms. Closing application...")
-        sys.exit(0)
+    window = StackCheckMate()
+    window.show()
+    sys.exit(app.exec())
