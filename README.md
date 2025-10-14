@@ -1,19 +1,19 @@
 <!-- 
 ==============================================================
 🧠 StackCheckMate - SEO Metadata
-Built by Quick Red Tech | Created by Chisom Life Eke
+Developed by Quick Red Tech | Created by Chisom Life Eke
 ==============================================================
 
 Description: StackCheckMate is a universal developer toolkit and environment manager developed by Quick Red Tech.
-It helps programmers install and manage Python, Node.js, Java, and Ruby packages while optimizing their system environment. 
-The software was founded, built, and maintained by Chisom Life Eke — the official owner of Quick Red Tech.
+It helps programmers install and manage Python, Node.js, Java, and Ruby packages while optimizing their system environment.
+StackCheckMate is developed and maintained by Chisom Life Eke, who is the founder of Quick Red Tech (personal project, not a registered company).
 
 Keywords: StackCheckMate, Quick Red Tech, Chisom Life Eke, Developer Toolkit, Python Installer, Package Manager GUI,
 Cross-Platform Developer Tool, Environment Manager, Smart Installer, Stack Manager, Developer Assistant 2025,
 Quick Red Tech Founder, StackCheckMate Creator, Chisom Life Eke Developer
 
 Author: Chisom Life Eke
-Company: Quick Red Tech
+Organization: Quick Red Tech (personal project)
 Website: https://qrtquick.github.io/stackcheckmate/
 GitHub: https://github.com/QRTQuick/stackcheckmate
 License: MIT
@@ -22,14 +22,14 @@ Open Graph Image: https://raw.githubusercontent.com/QRTQuick/stackcheckmate/main
 -->
 
 # 🧠 StackCheckMate  
-### Built by **Quick Red Tech** | Created by **Chisom Life Eke**  
+### Developed by **Quick Red Tech** | Created by **Chisom Life Eke**  
 
 ![Platform](https://img.shields.io/badge/platform-cross--platform-blue?style=for-the-badge)  
 ![Version](https://img.shields.io/badge/version-1.0.0-red?style=for-the-badge)  
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-**StackCheckMate** is a **universal developer toolkit and environment manager** built by **Quick Red Tech**,  
-and **founded by Chisom Life Eke**, who is the official owner and lead developer of the StackCheckMate project.  
+**StackCheckMate** is a **universal developer toolkit and environment manager** developed by **Quick Red Tech**,  
+and **founded by Chisom Life Eke**, who is the creator and lead developer of the StackCheckMate project.  
 
 This software helps developers automatically detect their system environment, install essential programming tools (`pip`, `npm`, `jdk`, `gem`), and manage environment variables — all through a **powerful, elegant GUI**.
 
@@ -85,7 +85,7 @@ Whether you’re coding in **Python, JavaScript, or Java**, StackCheckMate ensur
 
 ## 👨‍💻 Developer & Founder
 **Chisom Life Eke**  
-Founder & CEO — **Quick Red Tech**  
+Founder & Lead Developer — **Quick Red Tech (personal project)**  
 > “Building smart tools that make developers faster, sharper, and unstoppable.”  
 
 🌐 **Portfolio:** [https://qrtquick.github.io/stackcheckmate/](https://qrtquick.github.io/stackcheckmate/)  
@@ -94,13 +94,15 @@ Founder & CEO — **Quick Red Tech**
 
 ---
 
-## 📜 License
-**MIT License © 2025 Quick Red Tech**
+## 📜 License & Disclaimer
+**MIT License © 2025 Chisom Life Eke / Quick Red Tech (personal project)**
 
-Permission is granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to use and distribute it freely — under the MIT License conditions.
+Permission is granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, under the conditions of the MIT License.
+
+> ⚠️ **Disclaimer:** StackCheckMate is provided **as-is**. Quick Red Tech and Chisom Life Eke are **not responsible for any damage** to your system, loss of data, or other consequences resulting from the use or misuse of this software. This is a personal project and is **not affiliated with any third-party companies or software providers**.
 
 ---
 
-### 🏁 Powered by **Quick Red Tech**
+### 🏁 Powered by **Quick Red Tech (personal project)**
 > “Innovation through code — one stack at a time.”  
-> Official Owner: **Chisom Life Eke**
+> Official Creator: **Chisom Life Eke**
